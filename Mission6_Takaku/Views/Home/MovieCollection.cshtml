@@ -1,0 +1,50 @@
+﻿@model Collection
+<!--This is MovieCollection page.-->
+
+<!--Made a form for user to input the records of their favorite movies.
+    Also, this is post method when user submit the record. It doesn't show any info in the url.'
+-->
+<h2>Add Your Favorite Movie</h2>
+
+<form method="post">
+    <label asp-for="Category">Category:</label>
+    <br />
+    <input asp-for="Category" required /> <!--This is required field-->
+    <br />
+    <label asp-for="Title">Title:</label>
+    <br />
+    <input asp-for="Title" required /><!--This is required field-->
+    <br />
+    <label asp-for="Year">Year:</label>
+    <br />
+    <input asp-for="Year" required /><!--This is required field-->
+    <br />
+    <label asp-for="Director">Director:</label>
+    <br />
+    <input asp-for="Director" required /><!--This is required field-->
+    <br />
+    <label asp-for="Rating">Rating: </label>
+    <br />
+    <select asp-for="Rating" required><!--This is required field. There is four options they can select-->
+        <option value="G">G</option>
+        <option value="PG">PG</option>
+        <option value="PG-13">PG-13</option>
+        <option value="R">R</option>
+    </select>
+    <br />
+    <label asp-for="Edited">Edited: </label>
+    <br />
+    <input type="radio" asp-for="Edited" value="true" />Yes
+    <input type="radio" asp-for="Edited" value="false" />No
+    <br />
+    <label asp-for="LentTo">Lent to: </label>
+    <br />
+    <input asp-for="LentTo" />
+    <br />
+    <label asp-for="Note">Note: </label>
+    <br />
+    <textarea maxlength="25" asp-for="Note"></textarea><!--Maximum length is 25-->
+    <br />
+    <!--Create a button to submit the record to database-->
+    <button type="submit">Submit</button>
+</form>

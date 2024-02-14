@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Get to Know Joel";
+}
+<!--This is Get to know Joel page-->
+<div class="text-center">
+    <div>
+        <h1>@ViewData["Title"]</h1>
+    </div>
+
+    <!--Made short description and link to each page for Quick Wits and Baconsale.-->
+    <div>
+        <br />
+        <p>Quick Wits is a place where Joel Hilton performs regulary. Quick Wits is an improvisational comedy troupe that takes audience suggestions to create comedy sketches on the spot.</p>
+        <b>Check it out: </b><a asp-controller="Home" asp-action="QuickWits">Quick Wits</a>
+    </div>
+    <br />
+    <div>
+        <p>Baconsale is a comedian, a movie critic, and a barber walk into a family-friendly pop culture podcast to humorously discuss movies, TV, food, video games $ more.</p>
+        <b>Check it out: </b><a asp-controller="Home" asp-action="baconSale">Baconsale</a>
+    </div>
+    <br />
+    <!--I inserted image on the website, and when users click this image, it brings them to Baconsale page.-->
+    <div>
+        <a asp-controller="Home" asp-action="baconSale"><img src="~/image/baconsalekate.jpg" /></a>
+    </div>
+
+</div>
