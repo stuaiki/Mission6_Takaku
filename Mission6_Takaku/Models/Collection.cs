@@ -10,10 +10,15 @@ namespace Mission6_Takaku.Models
         [Key]
         [Required]
         public int CollectionID { get; set; }
+        [Required]
         public string Category { get; set; }
+        [Required]
         public string Title { get; set; }
+        [Required]
         public string Year { get; set; }
+        [Required]
         public string Director {  get; set; }
+        [Required]
         public string Rating { get; set; }
         public bool? Edited { get; set; }// nullable value
         public string? LentTo { get; set; }//nullable value
