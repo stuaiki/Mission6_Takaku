@@ -9,9 +9,10 @@
 <h2>Confirm Deletion</h2>
 <h3>@Model.Title</h3>
 <form method="post">
-
+    <!--There is input movieID because we need it to recognize which record we would like to delete. However, it is hidden from user.-->
     <input type="hidden" asp-for="MovieId" />
 
-    <button type="submit">Delete</button>
+    <!--Created button to delete or cancel-->
+    <button class="btn btn-danger" type="submit">Delete</button>
     <a class="btn btn-info" asp-controller="Home" asp-action="MovieList">Cancel</a>
 </form>

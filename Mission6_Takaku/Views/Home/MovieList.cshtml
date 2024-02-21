@@ -6,6 +6,11 @@
 @* @model List<Collection> *@
 @model List<Movie>
 
+<!--Heading-->
+<h1 class="text-center">Joel Hilton Favorite Movie List</h1>
+<br />
+
+<!--create a table that import data from database. Edited table with bootstrap-->
 <table class="table table-striped table-bordered">
     <thead class="thead-dark">
         <tr>
@@ -24,6 +29,7 @@
         </tr>
     </thead>
 
+    <!--For each record, it import the following features.-->
     @foreach (var x in Model)
     {
     <tbody>
@@ -39,6 +45,8 @@
             <td>@x.CopiedToPlex</td>
             <td>@x.Notes</td>
 
+
+            <!--Create edit and delete button for users to make changes on the table.-->
             <td>
                 <a class="btn btn-primary" asp-controller="Home" asp-action="Edit" asp-route-id="@x.MovieId">Edit</a>
             </td>

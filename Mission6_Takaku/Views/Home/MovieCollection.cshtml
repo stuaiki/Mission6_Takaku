@@ -6,15 +6,19 @@
 -->
 @model Movie
 
+<!--Heading-->
 <h2>Add Your Favorite Movie</h2>
 
-<form method="post">
 
+<!--Create a form for user to put new record-->
+<form method="post">
+    <!--MovieId is hidden becasue we don't want uset to edit it-->
     <input type="hidden" asp-for="MovieId" />
     <br />
 
     <label asp-for=CategoryId>Category:</label>
     <br />
+    <!--From catefories table, import each value for categoryName and show as select field for user to choose-->
     <select asp-for="CategoryId">
         <option value="">Select a Category</option>
         @foreach (Category c in ViewBag.Category)
@@ -26,22 +30,22 @@
 
     <label asp-for="Title">Title:</label>
     <br />
-    <input asp-for="Title"/><!--This is required field-->
+    <input asp-for="Title"/>
     <br />
     
     <label asp-for="Year">Year:</label>
     <br />
-    <input asp-for="Year"/><!--This is required field-->
+    <input asp-for="Year"/>
     <br />
     
     <label asp-for="Director">Director:</label>
     <br />
-    <input asp-for="Director"/><!--This is required field-->
+    <input asp-for="Director"/>
     <br />
     
     <label asp-for="Rating">Rating: </label>
     <br />
-    <select asp-for="Rating"><!--This is required field. There is four options they can select-->
+    <select asp-for="Rating"><!--There is four options they can select-->
         <option value="">Select a Rating</option>
         <option value="G">G</option>
         <option value="PG">PG</option>
@@ -76,5 +80,6 @@
     <!--Create a button to submit the record to database-->
     <button type="submit">Submit</button>
 
+    <!--This is for validation for user input. If it doesn't meet requirements, show error message-->
     <div asp-validation-summary="All"></div>
 </form>
