@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 //Add the server to connect database with data source.
-builder.Services.AddDbContext<MovieCollectionContext>(options =>
+builder.Services.AddDbContext<JoelHiltonMovieCollection>(options =>
 {
     options.UseSqlite(builder.Configuration["ConnectionStrings:MovieConnection"]);
 });
